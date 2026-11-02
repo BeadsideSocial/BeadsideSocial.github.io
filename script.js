@@ -44,3 +44,19 @@ document.getElementById("year").textContent = new Date().getFullYear();
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
   });
 })();
+
+// ===== Gallery lightbox =====
+(function gallery() {
+  const dlg = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  if (!dlg || typeof dlg.showModal !== "function") return;
+  document.querySelectorAll(".g-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const thumb = btn.querySelector("img");
+      img.src = btn.dataset.full;
+      img.alt = thumb.alt;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+})();
