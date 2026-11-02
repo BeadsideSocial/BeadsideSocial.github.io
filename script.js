@@ -34,6 +34,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       `Name: ${name}`,
       `Email: ${email}`,
       `Phone: ${form.phone.value.trim() || "-"}`,
+      `Package: ${form.package.value}`,
       `Occasion: ${form.occasion.value}`,
       `Preferred date: ${form.date.value || "Flexible"}`,
       `Guests: ${form.guests.value || "Not sure yet"}`,
@@ -60,3 +61,11 @@ document.getElementById("year").textContent = new Date().getFullYear();
   });
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 })();
+
+// ===== "Request this package" buttons preselect the package in the form =====
+document.querySelectorAll("[data-package]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const sel = document.getElementById("f-package");
+    if (sel) sel.value = link.dataset.package;
+  });
+});
