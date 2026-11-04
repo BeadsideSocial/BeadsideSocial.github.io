@@ -265,3 +265,13 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 .mat-ico .h { fill: #fff; opacity: .8; }
 .mat-ico .h2 { fill: var(--aqua); }
 @media (max-width: 700px) { .mat-grid { grid-template-columns: 1fr; } }
+
+/* Materials: metals note */
+.mat-metals { margin-top: clamp(20px, 3vw, 32px); border: 1.5px dashed var(--silver); border-radius: 22px; padding: clamp(24px, 4vw, 36px); }
+.mat-metals h3 { font-size: 1.25rem; font-weight: 500; color: var(--teal-deep); }
+.mat-metals p { color: var(--ink-soft); }
+.metal-list { list-style: none; margin: 0.5rem 0 1.25rem; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.metal-list li { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 999px; background: var(--aqua-pale); font-weight: 500; }
+.swatch { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--sw); box-shadow: inset 0 0 0 1px rgba(0,0,0,.12), inset -3px -3px 0 rgba(0,0,0,.08); }
+.swatch-clear { box-shadow: inset 0 0 0 1.5px var(--silver); }
+.metal-note { margin: 0; font-style: italic; }
