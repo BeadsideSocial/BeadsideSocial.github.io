@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-11-04c">
+  <link rel="stylesheet" href="styles.css?v=2026-11-04d">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -27,10 +27,12 @@
     <nav aria-label="Main">
       <ul>
         <li><a href="#how">How it works</a></li>
+        <li><a href="#social-nights">Social nights</a></li>
         <li><a href="#occasions">Occasions</a></li>
         <li><a href="#materials">Materials</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a class="nav-cta" href="#book">Request a date</a></li>
       </ul>
@@ -41,7 +43,7 @@
     <section class="hero" id="top">
       <div class="hero-copy">
         <h1>Bring your people.<br>Leave wearing something you made.</h1>
-        <p class="lede">Beadside Social hosts small, private jewelry-making parties in Palm Beach County. You bring the friends; we set the table with beads, wire, tools, and a little guidance, so everyone walks out in a new pair of earrings.</p>
+        <p class="lede">Beadside Social hosts small, private jewelry-making parties in Palm Beach County. Bring your friends for a private party or grab a seat at an open social night; we set the table with beads, wire, tools, and a little guidance, so everyone walks out in a new pair of earrings.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#book">Request a date</a>
           <a class="btn btn-quiet" href="#how">See how a night works</a>
@@ -60,7 +62,7 @@
       <ol class="steps">
         <li>
           <h3>Pick your date</h3>
-          <p>Send a request with your occasion and group size. Every party is private and by reservation only, so the table is just yours.</p>
+          <p>Book a private party for your group, or reserve a single seat at an open social night. Everything is by reservation only.</p>
         </li>
         <li>
           <h3>Settle in</h3>
@@ -90,6 +92,29 @@
       </div>
     </section>
 
+    <section class="socials" id="social-nights" aria-labelledby="soc-title">
+      <div class="soc-intro">
+        <h2 id="soc-title">Open social nights</h2>
+        <p>No group? No problem. Social nights are open to anyone, so you can come solo, bring a friend, or make it a date night. Book just the seats you need and meet new people around the bead bar.</p>
+        <p class="soc-price"><span class="amt">$49</span> per seat</p>
+        <ul class="pkg-facts">
+          <li>About 2 hours</li>
+          <li>Up to 8 seats per night</li>
+          <li>Seasonal and themed designs</li>
+          <li>Beads, tools, instruction, and drinks included</li>
+        </ul>
+      </div>
+      <div class="soc-calendar">
+        <h3>Upcoming nights</h3>
+        <!-- Social night dates are listed in script.js (SOCIAL_NIGHTS) -->
+        <ul class="night-list" id="night-list"></ul>
+        <div class="night-empty" id="night-empty">
+          <p><strong>New dates are coming soon.</strong> Want first dibs on a seat? Send us a note and we'll let you know when the next social night opens up.</p>
+          <a class="btn btn-quiet" href="#book" data-package="Open social night (single seats)" data-occasion="Open social night">Notify me about dates</a>
+        </div>
+      </div>
+    </section>
+
     <section class="occasions" id="occasions" aria-labelledby="occ-title">
       <div class="occ-intro">
         <h2 id="occ-title">Made for small celebrations</h2>
@@ -99,7 +124,8 @@
         <li><span class="dot" style="--c: var(--aqua)"></span><div><h3>Girls' night</h3><p>A reason to get everyone in the same room that isn't another dinner reservation.</p></div></li>
         <li><span class="dot" style="--c: var(--teal)"></span><div><h3>Birthdays</h3><p>A party with a built-in favor: everyone takes home what they made.</p></div></li>
         <li><span class="dot" style="--c: var(--silver)"></span><div><h3>Bridal showers &amp; bachelorettes</h3><p>Make matching pairs for the wedding party, or something the bride can wear on the day.</p></div></li>
-        <li><span class="dot" style="--c: var(--teal-deep)"></span><div><h3>Private parties</h3><p>Team outings, reunions, or a just-because afternoon. Tell us what you're celebrating.</p></div></li>
+        <li><span class="dot" style="--c: var(--teal-deep)"></span><div><h3>Team &amp; corporate events</h3><p>A low-pressure team outing or client thank-you that gets everyone talking. We can host at our studio or bring the party to your location, with a theme that fits your group.</p></div></li>
+        <li><span class="dot" style="--c: var(--aqua)"></span><div><h3>Private parties</h3><p>Reunions, family get-togethers, or a just-because afternoon. Tell us what you're celebrating.</p></div></li>
       </ul>
     </section>
 
@@ -255,6 +281,22 @@
       </dialog>
     </section>
 
+    <section class="reviews" id="reviews" aria-labelledby="rev-title">
+      <h2 id="rev-title">What our guests say</h2>
+      <!-- To add a review, copy this into the reviews-grid below and remove the "reviews-soon" panel:
+      <figure class="review">
+        <blockquote>"Guest's words here."</blockquote>
+        <figcaption>First name, occasion</figcaption>
+      </figure>
+      -->
+      <div class="reviews-grid"></div>
+      <div class="reviews-soon">
+        <svg class="quote-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34c0-10 4-16 12-20l2 3c-5 3-7 6-7 10h6v11H8zm18 0c0-10 4-16 12-20l2 3c-5 3-7 6-7 10h6v11H26z"/></svg>
+        <p><strong>Guest reviews are coming soon.</strong> Made earrings with us? We'd love to hear how your night went.</p>
+        <a class="btn btn-quiet" href="mailto:silescgroupllc@gmail.com?subject=My%20Beadside%20Social%20review">Share your experience</a>
+      </div>
+    </section>
+
     <section class="pricing" id="pricing" aria-labelledby="price-title">
       <div class="price-intro">
         <h2 id="price-title">Packages and pricing</h2>
@@ -286,6 +328,19 @@
           </ul>
           <a class="btn btn-quiet" href="#book" data-package="The Private Social">Request this package</a>
         </li>
+        <li class="pkg">
+          <h3>Kids &amp; Teen Social</h3>
+          <p class="price"><span class="amt">$39</span> per guest</p>
+          <p class="price-sub">For ages 8 to 17</p>
+          <ul class="pkg-facts">
+            <li>About 2 hours</li>
+            <li>6 to 8 guests</li>
+            <li>Kid-friendly designs and easy-to-handle beads</li>
+            <li>Snacks and kid-friendly drinks</li>
+            <li>Guests under 12 need an adult present</li>
+          </ul>
+          <a class="btn btn-quiet" href="#book" data-package="Kids &amp; Teen Social">Request this package</a>
+        </li>
         <li class="pkg pkg-soon">
           <h3>Luxe Social</h3>
           <p class="price"><span class="amt">From $75</span> per guest</p>
@@ -309,10 +364,29 @@
           <p>Premium bead upgrades ($10–$20), take-home earring kits ($25–$35), and gift cards.</p>
         </div>
         <div>
+          <h3>Refer a friend</h3>
+          <p>Send a friend our way and you'll both save: when they book, they get $10 off their party and you get $10 off your next one.</p>
+        </div>
+        <div>
           <h3>Booking terms</h3>
           <p>Parties are prepaid. Cancel or move your date 7 or more days ahead for a full refund or transfer; within 7 days, payments aren't refundable.</p>
         </div>
       </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <h2 id="about-title">Meet the maker</h2>
+        <p>Hi, I'm [YOUR NAME], the founder of Beadside Social. [A sentence or two about how you got into jewelry making.]</p>
+        <p>I started Beadside Social because the best nights are the ones where you're laughing with your people and making something with your hands. Every party happens in our own studio in Palm Beach County, small enough that I can sit with each guest, help with the tricky parts, and make sure everyone leaves with a pair they love.</p>
+        <p>Thanks for being here. I can't wait to see what you make.</p>
+        <p class="about-sign">[YOUR NAME], Beadside Social</p>
+      </div>
+      <ul class="about-values">
+        <li><h3>Small on purpose</h3><p>Six to eight guests, so no one gets lost in the crowd.</p></li>
+        <li><h3>Locally owned</h3><p>A Palm Beach County studio, not a franchise.</p></li>
+        <li><h3>Always fresh</h3><p>New beads, new themes, and a studio that changes with the seasons.</p></li>
+      </ul>
     </section>
 
     <section class="faq" id="faq" aria-labelledby="faq-title">
@@ -324,6 +398,10 @@
       <details>
         <summary>Where are parties held?</summary>
         <p>In our private studio space in Palm Beach County. Because it's reservation-only, we share the address once your date is confirmed. With The Private Social, we can also bring the party to your home.</p>
+      </details>
+      <details>
+        <summary>Can I come by myself?</summary>
+        <p>Absolutely. Open social nights are made for that. Book a single seat (or two) and join a small group at the bead bar.</p>
       </details>
       <details>
         <summary>How many people can come?</summary>
@@ -339,7 +417,7 @@
       </details>
       <details>
         <summary>Is there a minimum age?</summary>
-        <p>Guests 12 and up are welcome at studio parties.</p>
+        <p>Guests 8 and up are welcome. Kids under 12 need an adult present, and our Kids &amp; Teen Social is designed just for younger makers.</p>
       </details>
       <details>
         <summary>How far ahead should I book?</summary>
@@ -370,6 +448,8 @@
           <select id="f-package" name="package">
             <option>Signature Social</option>
             <option>The Private Social</option>
+            <option>Open social night (single seats)</option>
+            <option>Kids &amp; Teen Social</option>
             <option>Special edition</option>
             <option>Not sure yet</option>
           </select>
@@ -381,6 +461,8 @@
             <option>Birthday</option>
             <option>Bridal shower or bachelorette</option>
             <option>Private party</option>
+            <option>Team or corporate event</option>
+            <option>Open social night</option>
             <option>Something else</option>
           </select>
         </div>
@@ -410,6 +492,6 @@
     <p class="small">&copy; <span id="year"></span> Silesc Group LLC</p>
   </footer>
 
-  <script src="script.js?v=2026-11-04c"></script>
+  <script src="script.js?v=2026-11-04d"></script>
 </body>
 </html>
