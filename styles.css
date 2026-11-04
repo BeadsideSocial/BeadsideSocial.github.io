@@ -341,3 +341,7 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 @media (max-width: 1000px) { .extras { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 900px) { .socials, .about { grid-template-columns: 1fr; } .packages { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .extras { grid-template-columns: 1fr; } }
+
+/* Hero subhead */
+.hero h1 { margin-bottom: 0.75rem; }
+.hero-sub { font-size: clamp(1.25rem, 2.2vw, 1.5rem); color: var(--teal-deep); font-weight: 400; margin-bottom: 1.25rem; }
