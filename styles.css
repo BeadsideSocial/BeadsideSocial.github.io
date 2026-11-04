@@ -345,3 +345,9 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 /* Hero subhead */
 .hero h1 { margin-bottom: 0.75rem; }
 .hero-sub { font-size: clamp(1.25rem, 2.2vw, 1.5rem); color: var(--teal-deep); font-weight: 400; margin-bottom: 1.25rem; }
+
+/* About photo */
+.about-side { display: grid; gap: 14px; }
+.about-photo { margin: 0 0 6px; text-align: center; }
+.about-photo img { display: block; width: 100%; height: auto; border-radius: 24px; }
+.about-photo figcaption { margin-top: 6px; font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
