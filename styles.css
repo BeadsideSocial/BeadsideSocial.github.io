@@ -337,7 +337,7 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 .about-values p { margin: 0; color: var(--ink-soft); }
 
 /* Pricing now has four packages and four extras */
-.packages { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.packages { grid-template-columns: repeat(3, 1fr); }
 .extras { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1000px) { .extras { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 900px) { .socials, .about { grid-template-columns: 1fr; } .packages { grid-template-columns: 1fr; } }
