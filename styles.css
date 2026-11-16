@@ -236,6 +236,7 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 .extras { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); }
 .extras h3 { color: var(--teal-deep); }
 .extras p { color: var(--ink-soft); margin: 0; }
+.extras .extras-wide { grid-column: 1 / -1; max-width: 48em; }
 @media (max-width: 900px) { .packages, .extras { grid-template-columns: 1fr; } }
 
 /* Materials */
