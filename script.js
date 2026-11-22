@@ -1,6 +1,6 @@
 // ===== Settings =====
 // The address that receives booking requests. Change this to your business email.
-const BOOKING_EMAIL = "silescgroupllc@gmail.com";
+const BOOKING_EMAIL = "Beadsidesocial@gmail.com";
 
 // ===== Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
