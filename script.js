@@ -43,7 +43,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       "",
       form.notes.value.trim(),
     ];
-    const subject = `${form.package.value.startsWith("Open social") ? "Seat request" : "Party request"}: ${form.occasion.value}${form.date.value ? " on " + form.date.value : ""}`;
+    const subject = `${form.package.value.startsWith("Open creative") ? "Seat request" : "Party request"}: ${form.occasion.value}${form.date.value ? " on " + form.date.value : ""}`;
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
   });
 })();
@@ -64,10 +64,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 })();
 
-// ===== Open social nights =====
-// Add each upcoming night here. date is YYYY-MM-DD; time is shown as written.
+// ===== Open creative socials =====
+// Add each upcoming creative social here (any day or time). date is YYYY-MM-DD; time is shown as written.
 // Past dates hide themselves automatically. Example:
-//   { date: "2026-12-12", time: "7:00–9:00 pm", title: "Holiday Sparkle Night", seats: 8 },
+//   { date: "2026-12-12", time: "11:00 am–1:00 pm", title: "Holiday Sparkle Social", seats: 8 },
 const SOCIAL_NIGHTS = [
 ];
 
@@ -91,8 +91,8 @@ const SOCIAL_NIGHTS = [
     li.querySelector(".night-info span").textContent =
       `${d.toLocaleDateString("en-US", { weekday: "long" })}, ${n.time}` + (n.seats ? ` · ${n.seats}\u00a0seats` : "");
     const a = li.querySelector("a");
-    a.dataset.package = "Open social night (single seats)";
-    a.dataset.occasion = "Open social night";
+    a.dataset.package = "Open creative social (single seats)";
+    a.dataset.occasion = "Open creative social";
     a.dataset.date = n.date;
     a.dataset.note = `Seat request for ${n.title} on ${n.date}`;
     list.appendChild(li);

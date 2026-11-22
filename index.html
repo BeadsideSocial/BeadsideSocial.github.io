@@ -14,15 +14,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-11-22d">
+  <link rel="stylesheet" href="styles.css?v=2026-11-22e">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <div class="masthead">
+    <a class="brand-logo" href="#top" aria-label="Beadside Social home">
+      <picture>
+        <source srcset="logo.webp" type="image/webp">
+        <img src="logo.jpg" width="1200" height="775" alt="Beadside Social: Making memories, one bead at a time">
+      </picture>
+    </a>
   <aside class="promo" aria-label="Now booking">
     <div class="promo-tape" aria-hidden="true"></div>
     <div class="promo-inner">
-      <svg class="promo-ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 40c10-14 42-14 52 0" fill="none" stroke="#b6bec1" stroke-width="2"/><circle cx="14" cy="33" r="5" fill="#b6bec1"/><circle cx="32" cy="29" r="9" fill="#8fd0d6"/><circle cx="29" cy="26" r="2.6" fill="#fff" opacity=".85"/><circle cx="50" cy="33" r="5" fill="#fff"/><path class="spark" d="M48 8l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#fff"/><path class="spark s2" d="M14 10l1.3 3.7 3.7 1.3-3.7 1.3L14 20l-1.3-3.7L9 15l3.7-1.3z" fill="#8fd0d6"/></svg>
       <div class="promo-copy">
         <p class="promo-kicker">Now booking</p>
         <p class="promo-title">On-location &amp; <span>corporate parties</span></p>
@@ -33,18 +39,15 @@
     </div>
     <div class="promo-tape" aria-hidden="true"></div>
   </aside>
+  </div>
 
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Beadside Social home">
-      <svg class="wordmark-bead" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="10" r="2.6" class="hole"/></svg>
-      Beadside Social
-    </a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#on-location">We come to you</a></li>
         <li><a href="#crafts">Crafts</a></li>
         <li><a href="#how">How it works</a></li>
-        <li><a href="#social-nights">Social nights</a></li>
+        <li><a href="#creative-socials">Creative socials</a></li>
         <li><a href="#occasions">Occasions</a></li>
         <li><a href="#materials">Materials</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -67,10 +70,10 @@
           <a class="btn btn-quiet" href="#on-location">See on-location options</a>
         </div>
       </div>
-      <figure class="hero-logo">
+      <figure class="hero-photo">
         <picture>
-          <source srcset="logo.webp" type="image/webp">
-          <img src="logo.jpg" width="1200" height="775" alt="Beadside Social logo: a teal palm tree and a strand of aqua, pearl and silver beads ending in a starfish charm, with the tagline Making memories, one bead at a time">
+          <source srcset="gallery/birthday-party-table.webp" type="image/webp">
+          <img src="gallery/birthday-party-table.jpg" width="960" height="1200" alt="Birthday party table with pastel cupcakes, bubbly and three finished pairs of earrings">
         </picture>
       </figure>
     </section>
@@ -155,11 +158,11 @@
     </section>
 
     <section class="how" id="how" aria-labelledby="how-title">
-      <h2 id="how-title">How a night works</h2>
+      <h2 id="how-title">How a creative social works</h2>
       <ol class="steps">
         <li>
           <h3>Pick your date</h3>
-          <p>Book a party at your place or an event for your team. Once our studio reopens, you can also reserve a small private party or a seat at an open social night.</p>
+          <p>Book a party at your place or an event for your team. Once our studio reopens, you can also reserve a small private party or a seat at an open creative social.</p>
         </li>
         <li>
           <h3>Settle in</h3>
@@ -189,25 +192,25 @@
       </div>
     </section>
 
-    <section class="socials" id="social-nights" aria-labelledby="soc-title">
+    <section class="socials" id="creative-socials" aria-labelledby="soc-title">
       <div class="soc-intro">
-        <h2 id="soc-title">Open social nights</h2>
-        <p>No group? No problem. Social nights will return to the studio after its glow-up, and they're open to anyone, so you can come solo, bring a friend, or make it a date night. Book just the seats you need and meet new people around the bead bar.</p>
+        <h2 id="soc-title">Open creative socials</h2>
+        <p>No group? No problem. Creative socials are open to anyone, so you can come solo, bring a friend, or make it a date. Mornings, afternoons, or evenings, weekdays or weekends: we schedule them at all different times so there's one that fits your week. Book just the seats you need and meet new people around the craft table. Creative socials return to the studio after its glow-up.</p>
         <p class="soc-price"><span class="amt">$49</span> per seat</p>
         <ul class="pkg-facts">
           <li>About 2 hours</li>
-          <li>Up to 8 seats per night</li>
-          <li>Seasonal and themed designs</li>
+          <li>Up to 8 seats per social</li>
+          <li>Seasonal and themed crafts</li>
           <li>Beads, tools, instruction, and drinks included</li>
         </ul>
       </div>
       <div class="soc-calendar">
-        <h3>Upcoming nights</h3>
-        <!-- Social night dates are listed in script.js (SOCIAL_NIGHTS) -->
+        <h3>Upcoming socials</h3>
+        <!-- Creative social dates are listed in script.js (SOCIAL_NIGHTS) -->
         <ul class="night-list" id="night-list"></ul>
         <div class="night-empty" id="night-empty">
-          <p><strong>New dates are coming once the studio reopens.</strong> Want first dibs on a seat? Send us a note and we'll let you know when the next social night opens up.</p>
-          <a class="btn btn-quiet" href="#book" data-package="Open social night (single seats)" data-occasion="Open social night">Notify me about dates</a>
+          <p><strong>New dates are coming once the studio reopens.</strong> Want first dibs on a seat? Send us a note and we'll let you know when the next creative social opens up.</p>
+          <a class="btn btn-quiet" href="#book" data-package="Open creative social (single seats)" data-occasion="Open creative social">Notify me about dates</a>
         </div>
       </div>
     </section>
@@ -238,7 +241,7 @@
         <li>
           <svg class="studio-ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="15" width="34" height="24" rx="5"/><path d="M17 15l3-5h8l3 5"/><circle cx="24" cy="27" r="7"/><circle cx="35" cy="21" r="1.4"/></svg>
           <h3>A photo spot for every party</h3>
-          <p>We set up a fun photo area so you can capture the night, the group, and the earrings you made.</p>
+          <p>We set up a fun photo area so you can capture the moment, the group, and the earrings you made.</p>
         </li>
         <li>
           <svg class="studio-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40l6-20 14 14z"/><path d="M20 20l14 14"/><path d="M30 8v5M38 14h-5M36 9l-3 3M40 24c-3-1-5 0-6 2M24 10c1 3 0 5-2 6"/></svg>
@@ -444,7 +447,7 @@
       <div class="reviews-grid"></div>
       <div class="reviews-soon">
         <svg class="quote-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34c0-10 4-16 12-20l2 3c-5 3-7 6-7 10h6v11H8zm18 0c0-10 4-16 12-20l2 3c-5 3-7 6-7 10h6v11H26z"/></svg>
-        <p><strong>Guest reviews are coming soon.</strong> Made earrings with us? We'd love to hear how your night went.</p>
+        <p><strong>Guest reviews are coming soon.</strong> Made earrings with us? We'd love to hear how your creative social went.</p>
         <a class="btn btn-quiet" href="mailto:Beadsidesocial@gmail.com?subject=My%20Beadside%20Social%20review">Share your experience</a>
       </div>
     </section>
@@ -602,7 +605,7 @@
       </details>
       <details>
         <summary>Can I come by myself?</summary>
-        <p>Absolutely. Open social nights are made for that, and they'll return when the studio reopens. Book a single seat (or two) and join a small group at the bead bar.</p>
+        <p>Absolutely. Open creative socials are made for that, and they'll return when the studio reopens. Book a single seat (or two) and join a small group at the bead bar.</p>
       </details>
       <details>
         <summary>How many people can come?</summary>
@@ -625,8 +628,12 @@
         <p>Guests 8 and up are welcome. Kids under 12 need an adult present, and our Kids &amp; Teen Social is designed just for younger makers.</p>
       </details>
       <details>
+        <summary>What days and times do you host?</summary>
+        <p>Any time that works for you. We host brunch crafting, afternoon parties, after-work team events, and evening get-togethers, on weekdays and weekends.</p>
+      </details>
+      <details>
         <summary>How far ahead should I book?</summary>
-        <p>On-location dates are open now. Weekend evenings go first, so a few weeks ahead is a good idea, especially for showers, birthdays, and company events with a fixed date. Larger groups need a bit more lead time for supplies.</p>
+        <p>On-location dates are open now. We host mornings, afternoons, and evenings, any day of the week. Weekends go first, so a few weeks ahead is a good idea, especially for showers, birthdays, and company events with a fixed date. Larger groups need a bit more lead time for supplies.</p>
       </details>
     </section>
 
@@ -660,7 +667,7 @@
             <optgroup label="In studio · waitlist">
               <option>Signature Social</option>
               <option>The Private Social</option>
-              <option>Open social night (single seats)</option>
+              <option>Open creative social (single seats)</option>
             </optgroup>
             <option>Not sure yet</option>
           </select>
@@ -686,7 +693,7 @@
             <option>Bridal shower or bachelorette</option>
             <option>Private party</option>
             <option>Team or corporate event</option>
-            <option>Open social night</option>
+            <option>Open creative social</option>
             <option>Something else</option>
           </select>
         </div>
@@ -720,6 +727,6 @@
     <p class="small">&copy; <span id="year"></span> Silesc Group LLC</p>
   </footer>
 
-  <script src="script.js?v=2026-11-22d"></script>
+  <script src="script.js?v=2026-11-22e"></script>
 </body>
 </html>

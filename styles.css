@@ -426,3 +426,31 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 .craft-ico .f { fill: var(--aqua); }
 @media (max-width: 900px) { .craft-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .craft-grid { grid-template-columns: 1fr; } }
+
+/* Masthead: logo top-left, banner flowing out of it */
+.masthead { position: relative; display: flex; align-items: stretch; background: var(--pearl); }
+.brand-logo { position: relative; z-index: 3; flex: none; width: clamp(230px, 24vw, 320px); display: flex; align-items: center; justify-content: center; background: var(--pearl); padding: 12px 18px 12px clamp(12px, 2vw, 28px); border-radius: 0 999px 999px 0; box-shadow: 8px 0 22px rgba(21,95,102,.22); margin-right: -64px; }
+.brand-logo img { display: block; width: 100%; height: auto; }
+.masthead .promo { flex: 1; min-width: 0; box-shadow: none; }
+.masthead .promo-inner { max-width: none; padding-left: calc(64px + clamp(16px, 3vw, 40px)); justify-content: space-between; text-align: left; }
+.masthead .promo-copy { flex: 1; }
+.masthead + .site-header { justify-content: center; padding-top: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); max-width: none; }
+.masthead + .site-header nav ul { justify-content: center; }
+
+/* Hero photo (replaces the logo) */
+.hero-photo { margin: 0; }
+.hero-photo img { display: block; width: 100%; max-height: 560px; object-fit: cover; border-radius: 28px; box-shadow: 0 14px 34px rgba(21,95,102,.18); }
+
+@media (max-width: 900px) {
+  .hero-photo img { max-height: 380px; }
+}
+@media (max-width: 760px) {
+  .masthead { flex-direction: column; }
+  .brand-logo { width: auto; margin: 0; border-radius: 0; box-shadow: none; padding: 14px var(--gutter) 0; }
+  .brand-logo img { max-width: 260px; }
+  .brand-logo::after { content: ""; position: absolute; left: 50%; bottom: -12px; width: 26px; height: 26px; background: var(--pearl); transform: translateX(-50%) rotate(45deg); z-index: -1; }
+  .masthead .promo-inner { padding-left: var(--gutter); padding-top: 26px; }
+}
+@media (min-width: 761px) {
+  .brand-logo { overflow: hidden; padding-right: 56px; width: clamp(260px, 27vw, 350px); }
+}
