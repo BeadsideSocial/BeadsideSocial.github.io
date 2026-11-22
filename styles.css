@@ -352,3 +352,29 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 .about-photo { margin: 0 0 6px; text-align: center; }
 .about-photo img { display: block; width: 100%; height: auto; border-radius: 24px; }
 .about-photo figcaption { margin-top: 6px; font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
+
+/* Now booking: on-location & corporate */
+.now-booking { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 1.25rem; padding: 8px 16px; border-radius: 999px; background: var(--aqua-pale); color: var(--teal-deep); font-weight: 600; font-size: 0.9375rem; }
+.pulse { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 0 rgba(31,127,136,.5); }
+@media (prefers-reduced-motion: no-preference) {
+  .pulse { animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(31,127,136,.5); } 70% { box-shadow: 0 0 0 10px rgba(31,127,136,0); } 100% { box-shadow: 0 0 0 0 rgba(31,127,136,0); } }
+}
+.onloc { border-top: 1px solid var(--line); }
+.onloc-intro { max-width: 44em; }
+.onloc-intro > p:last-child { color: var(--ink-soft); }
+.onloc-cards { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 24px); }
+.onloc-card { display: flex; flex-direction: column; background: var(--teal-deep); color: var(--pearl); border-radius: 22px; padding: 28px 24px; }
+.onloc-card h3 { font-size: 1.375rem; font-weight: 500; }
+.onloc-price { margin: 0.5rem 0 1rem; color: var(--aqua-pale); }
+.onloc-price .amt { color: var(--pearl); }
+.onloc-card .pkg-facts li { color: var(--aqua-pale); }
+.onloc-card .btn { text-align: center; background: var(--pearl); border-color: var(--pearl); color: var(--teal-deep); }
+.onloc-card .btn:hover { background: var(--aqua-pale); border-color: var(--aqua-pale); }
+.onloc-note { margin: clamp(20px, 3vw, 32px) 0 0; padding: 18px 22px; border: 1.5px dashed var(--silver); border-radius: 18px; color: var(--ink-soft); }
+.onloc-note strong { color: var(--ink); }
+.onloc-note a { color: var(--teal-deep); font-weight: 600; }
+.pkg-tag { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); }
+.pkg-featured .pkg-tag { color: var(--aqua); }
+.pkg-tag-studio { color: var(--ink-soft); }
+@media (max-width: 760px) { .onloc-cards { grid-template-columns: 1fr; } }

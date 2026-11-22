@@ -38,6 +38,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       `Occasion: ${form.occasion.value}`,
       `Preferred date: ${form.date.value || "Flexible"}`,
       `Guests: ${form.guests.value || "Not sure yet"}`,
+      `Location: ${form.location.value.trim() || "-"}`,
       "",
       form.notes.value.trim(),
     ];
