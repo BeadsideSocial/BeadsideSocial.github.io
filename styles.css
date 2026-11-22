@@ -454,3 +454,7 @@ input[aria-invalid="true"] { border-color: #b3261e; }
 @media (min-width: 761px) {
   .brand-logo { overflow: hidden; padding-right: 56px; width: clamp(260px, 27vw, 350px); }
 }
+
+/* Studio update graphic under the "coming back soon" note */
+.onloc-sparkle { margin: clamp(16px, 2.5vw, 24px) auto 0; max-width: 440px; }
+.onloc-sparkle img { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 10px 28px rgba(21,95,102,.16); }
