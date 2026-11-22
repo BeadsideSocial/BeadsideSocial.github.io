@@ -35,6 +35,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       `Email: ${email}`,
       `Phone: ${form.phone.value.trim() || "-"}`,
       `Package: ${form.package.value}`,
+      `Craft: ${form.craft.value}`,
       `Occasion: ${form.occasion.value}`,
       `Preferred date: ${form.date.value || "Flexible"}`,
       `Guests: ${form.guests.value || "Not sure yet"}`,
@@ -100,11 +101,12 @@ const SOCIAL_NIGHTS = [
 
 // ===== Buttons that preselect the booking form =====
 document.addEventListener("click", (e) => {
-  const link = e.target.closest("[data-package]");
+  const link = e.target.closest("[data-package], [data-craft]");
   if (!link) return;
   const form = document.getElementById("book-form");
   if (!form) return;
-  form.package.value = link.dataset.package;
+  if (link.dataset.package) form.package.value = link.dataset.package;
+  if (link.dataset.craft) form.craft.value = link.dataset.craft;
   if (link.dataset.occasion) form.occasion.value = link.dataset.occasion;
   if (link.dataset.date) form.date.value = link.dataset.date;
   if (link.dataset.note && !form.notes.value) form.notes.value = link.dataset.note;

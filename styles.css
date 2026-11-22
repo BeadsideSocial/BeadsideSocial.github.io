@@ -410,3 +410,19 @@ input[aria-invalid="true"] { border-color: #b3261e; }
   .promo-btn { flex: 1 1 100%; text-align: center; }
 }
 .nowrap { white-space: nowrap; }
+
+/* More than jewelry: crafts */
+.crafts { border-top: 1px solid var(--line); }
+.crafts-intro { max-width: 44em; }
+.crafts-intro > p:last-child { color: var(--ink-soft); }
+.craft-grid { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 24px); }
+.craft { display: flex; flex-direction: column; background: var(--aqua-pale); border-radius: 22px; padding: 24px 22px; }
+.craft:last-child { background: var(--pearl); border: 1.5px dashed var(--teal); }
+.craft h3 { font-size: 1.1875rem; font-weight: 500; color: var(--teal-deep); margin-top: 0.75rem; }
+.craft p { color: var(--ink-soft); margin: 0.25rem 0 1rem; flex: 1; }
+.craft a { color: var(--teal-deep); font-weight: 600; text-underline-offset: 4px; }
+.craft-ico { width: 56px; height: 56px; padding: 6px; border-radius: 16px; background: var(--pearl); fill: none; stroke: var(--teal-deep); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.craft:last-child .craft-ico { background: var(--aqua-pale); }
+.craft-ico .f { fill: var(--aqua); }
+@media (max-width: 900px) { .craft-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .craft-grid { grid-template-columns: 1fr; } }
