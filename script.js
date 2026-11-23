@@ -40,6 +40,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       `Preferred date: ${form.date.value || "Flexible"}`,
       `Guests: ${form.guests.value || "Not sure yet"}`,
       `Location: ${form.location.value.trim() || "-"}`,
+      `Language: ${form.language.value}`,
       "",
       form.notes.value.trim(),
     ];

@@ -594,6 +594,7 @@
       <ul class="about-values">
         <li><h3>Small in studio, any size on location</h3><p>Studio parties stay at six to eight guests, so no one gets lost in the crowd. When we come to you, bring everyone.</p></li>
         <li><h3>Family-run</h3><p>Run by Monica and David, a sister-and-brother team in Palm Beach County. Not a franchise.</p></li>
+        <li><h3>English, Español, Português</h3><p>We host every party in English, Spanish, or Portuguese. Just tell us which you prefer when you book.</p></li>
         <li><h3>Always fresh</h3><p>New supplies, new crafts, new themes, and a studio that changes with the seasons.</p></li>
       </ul>
       </div>
@@ -632,6 +633,10 @@
       <details>
         <summary>Can we bring our own food or cake?</summary>
         <p>Yes! If you're celebrating a birthday, shower, or other occasion, you're welcome to bring your own cake and food. You can also add sweet and savory snacks to your package, or ask us about our catering and bakery partners for something more elaborate or themed.</p>
+      </details>
+      <details>
+        <summary>What languages do you host in?</summary>
+        <p>Our sessions can be conducted in English, Spanish, or Portuguese. Let us know your preferred language in your booking request, and we'll guide your group in that language from start to finish. Mixed groups are welcome too!</p>
       </details>
       <details>
         <summary>Is there a minimum age?</summary>
@@ -715,9 +720,17 @@
           <label for="f-guests">Number of guests</label>
           <input id="f-guests" name="guests" type="number" min="1" inputmode="numeric">
         </div>
-        <div class="field field-wide">
+        <div class="field">
           <label for="f-location">Event location <span class="opt">(city, or venue/office name)</span></label>
           <input id="f-location" name="location" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="f-language">Preferred language</label>
+          <select id="f-language" name="language">
+            <option selected>English</option>
+            <option>Español (Spanish)</option>
+            <option>Português (Portuguese)</option>
+          </select>
         </div>
         <div class="field field-wide">
           <label for="f-notes">Anything else we should know?</label>
